@@ -22,4 +22,8 @@ public class OptiBestConfig {
     public static boolean memoryOptimization = true;
     public static boolean soundThrottle = true;
     public static boolean hudOptimization = true;
+    public static boolean mobAiThrottle = true;
+    public static boolean shadowBypass = true;
+    public static boolean playerListOptimization = true;
+    public static boolean packetThrottle = true;
 }
