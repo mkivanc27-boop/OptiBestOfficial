@@ -27,3 +27,4 @@ public class BlockEntityRendererMixin {
         Vec3d bePos = Vec3d.ofCenter(blockEntity.getPos());
         if (playerPos.squaredDistanceTo(bePos) > 24 * 24) ci.cancel();
     }
+}
