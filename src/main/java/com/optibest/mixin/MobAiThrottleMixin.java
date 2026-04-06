@@ -18,7 +18,12 @@ public class MobAiThrottleMixin {
         if (client.player == null) return;
         MobEntity self = (MobEntity)(Object)this;
         double distSq = client.player.getPos().squaredDistanceTo(self.getPos());
-        if (distSq > 32 * 32 && System.currentTimeMillis() % 4 != 0) ci.cancel();
-        if (distSq > 48 * 48) ci.cancel();
+        if (distSq > 32 * 32 && System.currentTimeMillis() % 4 != 0) {
+            ci.cancel();
+            return;
+        }
+        if (distSq > 48 * 48) {
+            ci.cancel();
+        }
     }
-}p
+}
