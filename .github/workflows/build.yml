@@ -1,0 +1,45 @@
+name: Build OptiBest
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Kodu İndir
+        uses: actions/checkout@v4
+
+      - name: Java 21 Kur
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Gradle Cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      - name: Gradle Wrapper Oluştur
+        run: gradle wrapper --gradle-version 8.11
+
+      - name: Gradle İzni Ver
+        run: chmod +x gradlew
+
+      - name: JAR Derle
+        run: ./gradlew build --no-daemon
+
+      - name: JAR Yükle
+        uses: actions/upload-artifact@v4
+        with:
+          name: OptiBest-1.0.0
+          path: build/libs/OptiBest-1.0.0.jar
+          if-no-files-found: error
