@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "optibest",
+  "version": "1.0.0",
+  "name": "OptiBest",
+  "description": "All-in-one FPS optimization client for Minecraft 1.21.4",
+  "authors": ["OptiBest"],
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.optibest.OptiBestClient"],
+    "modmenu": ["com.optibest.config.OptiBestModMenuIntegration"]
+  },
+  "mixins": ["optibest.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.16.10",
+    "minecraft": "~1.21.4",
+    "java": ">=21",
+    "fabric-api": "*",
+    "modmenu": "*"
+  }
+}
