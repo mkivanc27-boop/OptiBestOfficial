@@ -26,18 +26,22 @@ public class OptiBestConfigScreen extends Screen {
         y = addToggle(centerX, y, btnWidth, "Fog Kapali", OptiBestConfig.fogDisabled, v -> OptiBestConfig.fogDisabled = v);
         y = addToggle(centerX, y, btnWidth, "Entity Golgeleri Kapali", OptiBestConfig.entityShadowsDisabled, v -> OptiBestConfig.entityShadowsDisabled = v);
         y = addToggle(centerX, y, btnWidth, "Bulutlar Kapali", OptiBestConfig.cloudRenderOff, v -> OptiBestConfig.cloudRenderOff = v);
-        y = addToggle(centerX, y, btnWidth, "Gokyuzu Render Kapali", OptiBestConfig.skyRenderOff, v -> OptiBestConfig.skyRenderOff = v);
+        y = addToggle(centerX, y, btnWidth, "Gokyuzu Kapali", OptiBestConfig.skyRenderOff, v -> OptiBestConfig.skyRenderOff = v);
         y = addToggle(centerX, y, btnWidth, "Hava Durumu Kapali", OptiBestConfig.weatherRenderOff, v -> OptiBestConfig.weatherRenderOff = v);
         y = addToggle(centerX, y, btnWidth, "Partikul Limiti", OptiBestConfig.particleLimit, v -> OptiBestConfig.particleLimit = v);
-        y = addToggle(centerX, y, btnWidth, "Chunk Guncelleme Sinirla", OptiBestConfig.chunkThrottling, v -> OptiBestConfig.chunkThrottling = v);
-        y = addToggle(centerX, y, btnWidth, "Hizli Grafik Modu", OptiBestConfig.fastGraphics, v -> OptiBestConfig.fastGraphics = v);
+        y = addToggle(centerX, y, btnWidth, "Chunk Sinirla", OptiBestConfig.chunkThrottling, v -> OptiBestConfig.chunkThrottling = v);
+        y = addToggle(centerX, y, btnWidth, "Hizli Grafik", OptiBestConfig.fastGraphics, v -> OptiBestConfig.fastGraphics = v);
         y = addToggle(centerX, y, btnWidth, "Smooth Lighting Kapali", OptiBestConfig.smoothLightingOff, v -> OptiBestConfig.smoothLightingOff = v);
-        y = addToggle(centerX, y, btnWidth, "Entity Tick Optimizasyonu", OptiBestConfig.entityTickOptimization, v -> OptiBestConfig.entityTickOptimization = v);
+        y = addToggle(centerX, y, btnWidth, "Entity Tick Opt", OptiBestConfig.entityTickOptimization, v -> OptiBestConfig.entityTickOptimization = v);
         y = addToggle(centerX, y, btnWidth, "Block Entity Culling", OptiBestConfig.blockEntityCulling, v -> OptiBestConfig.blockEntityCulling = v);
-        y = addToggle(centerX, y, btnWidth, "Biome Renk Gecisi Kapali", OptiBestConfig.biomeBlendsOff, v -> OptiBestConfig.biomeBlendsOff = v);
-        y = addToggle(centerX, y, btnWidth, "Bellek Optimizasyonu", OptiBestConfig.memoryOptimization, v -> OptiBestConfig.memoryOptimization = v);
-        y = addToggle(centerX, y, btnWidth, "Ses Motoru Sinirla", OptiBestConfig.soundThrottle, v -> OptiBestConfig.soundThrottle = v);
-        y = addToggle(centerX, y, btnWidth, "HUD Optimizasyonu", OptiBestConfig.hudOptimization, v -> OptiBestConfig.hudOptimization = v);
+        y = addToggle(centerX, y, btnWidth, "Biome Renk Kapali", OptiBestConfig.biomeBlendsOff, v -> OptiBestConfig.biomeBlendsOff = v);
+        y = addToggle(centerX, y, btnWidth, "Bellek Opt", OptiBestConfig.memoryOptimization, v -> OptiBestConfig.memoryOptimization = v);
+        y = addToggle(centerX, y, btnWidth, "Ses Sinirla", OptiBestConfig.soundThrottle, v -> OptiBestConfig.soundThrottle = v);
+        y = addToggle(centerX, y, btnWidth, "HUD Opt", OptiBestConfig.hudOptimization, v -> OptiBestConfig.hudOptimization = v);
+        y = addToggle(centerX, y, btnWidth, "Mob AI Throttle", OptiBestConfig.mobAiThrottle, v -> OptiBestConfig.mobAiThrottle = v);
+        y = addToggle(centerX, y, btnWidth, "Golge Bypass", OptiBestConfig.shadowBypass, v -> OptiBestConfig.shadowBypass = v);
+        y = addToggle(centerX, y, btnWidth, "Player List Opt", OptiBestConfig.playerListOptimization, v -> OptiBestConfig.playerListOptimization = v);
+        y = addToggle(centerX, y, btnWidth, "Paket Throttle", OptiBestConfig.packetThrottle, v -> OptiBestConfig.packetThrottle = v);
 
         this.addDrawableChild(ButtonWidget.builder(Text.literal("Geri"), btn -> {
             assert this.client != null;
@@ -72,4 +76,4 @@ public class OptiBestConfigScreen extends Screen {
         assert this.client != null;
         this.client.setScreen(parent);
     }
-}
+                                           }
