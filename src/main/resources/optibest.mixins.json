@@ -18,7 +18,6 @@
     "SoundManagerMixin",
     "HudRendererMixin",
     "MobAiThrottleMixin",
-    "ScoreboardMixin",
     "ShadowRendererMixin",
     "PlayerListMixin",
     "PacketHandlerMixin",
