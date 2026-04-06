@@ -5,6 +5,7 @@
   "name": "OptiBest",
   "description": "All-in-one FPS optimization client for Minecraft 1.21.4",
   "authors": ["OptiBest"],
+  "icon": "assets/optibest/optibest.png",
   "environment": "client",
   "entrypoints": {
     "client": ["com.optibest.OptiBestClient"],
