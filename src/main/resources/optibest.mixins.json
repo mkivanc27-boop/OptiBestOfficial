@@ -16,7 +16,13 @@
     "BiomeColorsMixin",
     "GameOptionsMixin",
     "SoundManagerMixin",
-    "HudRendererMixin"
+    "HudRendererMixin",
+    "MobAiThrottleMixin",
+    "ScoreboardMixin",
+    "ShadowRendererMixin",
+    "PlayerListMixin",
+    "PacketHandlerMixin",
+    "ChatRenderMixin"
   ],
   "injectors": { "defaultRequire": 1 }
 }
