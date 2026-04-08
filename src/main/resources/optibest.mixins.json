@@ -1,11 +1,17 @@
-src/main/resources/optibest.mixins.json
 {
   "required": true,
   "minVersion": "0.8",
   "package": "com.optibest.mixin",
   "compatibilityLevel": "JAVA_21",
-  "client": [
-    "EntityRendererMixin"
+  "mixins": [
+    "MixinEntityRenderer",
+    "MixinLightingProvider",
+    "MixinTextRenderer",
+    "MixinParticleManager",
+    "MixinWorldRenderer",
+    "MixinNoShadows",
+    "MixinBlockOcclusion",
+    "MixinFastFont"
   ],
   "injectors": { "defaultRequire": 1 }
 }
