@@ -17,11 +17,8 @@
     "GameOptionsMixin",
     "SoundManagerMixin",
     "HudRendererMixin",
-    "MobAiThrottleMixin",
-    "ShadowRendererMixin",
     "PlayerListMixin",
-    "PacketHandlerMixin",
-    "ChatRenderMixin"
+    "PacketHandlerMixin"
   ],
   "injectors": { "defaultRequire": 1 }
 }
